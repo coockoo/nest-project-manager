@@ -1,5 +1,10 @@
 # Comcard backend test
 
+# How to start
+
+- To start Postgres – run `./postgres/dev.sh` from the project root.
+  Leave it in a separate terminal window/tab to run.
+
 # Thoughts
 
 - Nest.js has a lot of magick (as all of the frameworks).
