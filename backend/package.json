@@ -1,0 +1,26 @@
+{
+  "name": "comcard-test-backend",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon --config .nodemon.json",
+    "test": "jest"
+  },
+  "author": "Oleksandr Bondarchuk <alex.coockoo@gmail.com> (https://github.com/coockoo)",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "nodemon": "^2.0.1",
+    "ts-node": "^8.5.4",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.10.5",
+    "@nestjs/core": "^6.10.5",
+    "@nestjs/platform-express": "^6.10.5",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
+  }
+}
