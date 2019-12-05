@@ -12,7 +12,9 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/node-fetch": "^2.5.4",
+    "eslint": "^6.7.2",
     "nodemon": "^2.0.1",
+    "prettier": "^1.19.1",
     "ts-node": "^8.5.4",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.7.2"
@@ -22,7 +24,9 @@
     "@nestjs/core": "^6.10.5",
     "@nestjs/platform-express": "^6.10.5",
     "node-fetch": "^2.6.0",
+    "pg": "^7.14.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.3"
+    "rxjs": "^6.5.3",
+    "typeorm": "^0.2.20"
   }
 }
