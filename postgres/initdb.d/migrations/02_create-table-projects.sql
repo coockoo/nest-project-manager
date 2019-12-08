@@ -1,6 +1,8 @@
 create table projects (
   id bigserial primary key,
 
+  creator_id bigint references users(id),
+
   owner text not null,
   name text not null,
   url text not null,

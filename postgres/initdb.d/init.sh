@@ -14,4 +14,5 @@ cd /docker-entrypoint-initdb.d/
 
 # apply migrations (this should be done better in production.
 # but we are not in production right now
-psql -U $POSTGRES_USER -d $POSTGRES_DB -f ./migrations/01_create-table-projects.sql
+psql -U $POSTGRES_USER -d $POSTGRES_DB -f ./migrations/01_create-table-users.sql
+psql -U $POSTGRES_USER -d $POSTGRES_DB -f ./migrations/02_create-table-projects.sql
