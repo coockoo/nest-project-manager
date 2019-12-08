@@ -8,16 +8,18 @@ import Button from '../../components/button';
 
 import s from './styles.less';
 
-export default function SignInPage() {
+// This is a duplicated page of sign-in. And I'm fully aware of it
+// For demo (MVP) purposes I've decided to leave it as is.
+export default function SignUpPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = useCallback(() => {
-    const doSignIn = async () => {
-      const authState = await api.post('/users/sign-in', { username, password });
+    const doSignUp = async () => {
+      const authState = await api.post('/users/sign-up', { username, password });
       auth.setAuthState(authState);
     };
-    doSignIn();
+    doSignUp();
   });
 
   return (
@@ -44,10 +46,10 @@ export default function SignInPage() {
           />
         </div>
         <Button onClick={handleSubmit} className={s.submit}>
-          Sign In
+          Sign Up
         </Button>
         <div className={s.signUp}>
-          or&nbsp;<Link to="/sign-up">Sign Up</Link>
+          or&nbsp;<Link to="/sign-in">Sign In</Link>
         </div>
       </form>
     </div>

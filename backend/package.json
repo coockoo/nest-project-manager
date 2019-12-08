@@ -11,6 +11,7 @@
   "author": "Oleksandr Bondarchuk <alex.coockoo@gmail.com> (https://github.com/coockoo)",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/node-fetch": "^2.5.4",
     "eslint": "^6.7.2",
     "nodemon": "^2.0.1",
@@ -23,6 +24,7 @@
     "@nestjs/common": "^6.10.5",
     "@nestjs/core": "^6.10.5",
     "@nestjs/platform-express": "^6.10.5",
+    "bcryptjs": "^2.4.3",
     "node-fetch": "^2.6.0",
     "pg": "^7.14.0",
     "reflect-metadata": "^0.1.13",
