@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { hot } from 'react-hot-loader/root';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-// import auth from './services/auth';
+import auth from './services/auth';
 
 import AuthenticatedLayout from './layouts/authenticated';
 import AnonymousLayout from './layouts/anonymous';
 
 function App() {
-  /*
   const [isAuthenticated, setAuthenticated] = useState(auth.isAuthenticated());
   useEffect(() => {
     const authSubscription = () => {
@@ -19,8 +18,6 @@ function App() {
       auth.unsubscribe(authSubscription);
     };
   }, []);
-  */
-  const isAuthenticated = false;
   return <Router>{isAuthenticated ? <AuthenticatedLayout /> : <AnonymousLayout />}</Router>;
 }
 
