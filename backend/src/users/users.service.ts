@@ -4,11 +4,14 @@ import * as bcrypt from 'bcryptjs';
 
 import { USER_REPOSITORY } from '../constants';
 
+import { JWTService } from '../jwt/jwt.service';
+
 import { User } from './user.entity';
 
 @Injectable()
 export class UsersService {
   public constructor(
+    private readonly jwtService: JWTService,
     @Inject(USER_REPOSITORY)
     private readonly userRepository: Repository<User>
   ) {}
@@ -17,6 +20,7 @@ export class UsersService {
     const [user] = await this.userRepository.find({
       select: ['id', 'username', 'password'],
       where: { username },
+      take: 1,
     });
 
     if (!user) {
@@ -28,13 +32,14 @@ export class UsersService {
       throw new Error('passwords does not match');
     }
 
-    return { accessToken: 'asdflkjadsflkj', exp: Date.now() + 100000000 };
+    return this.jwtService.sign(user);
   }
 
   public async signUp(username: string, password: string) {
     const [user] = await this.userRepository.find({
       select: ['username'],
       where: { username },
+      take: 1,
     });
 
     if (user) {
@@ -43,12 +48,11 @@ export class UsersService {
 
     const passwordHash = await bcrypt.hash(password, 10);
 
-    await this.userRepository.save({
+    const newUser = await this.userRepository.save({
       username,
       password: passwordHash,
     });
 
-    // TODO: Add common jwt access token
-    return { accessToken: 'asdflkjadsflkj', exp: Date.now() + 100000000 };
+    return this.jwtService.sign(user);
   }
 }

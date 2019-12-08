@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import auth from '../../services/auth';
 
@@ -16,6 +17,12 @@ export default function AuthenticatedLayout() {
       <div className={s.header}>
         <Button onClick={handleSignOut}>Sign Out</Button>
       </div>
+      <Switch>
+        <Route exact path="/projects">
+          <span>Projects page</span>
+        </Route>
+        <Redirect to="/projects" />
+      </Switch>
     </div>
   );
 }
