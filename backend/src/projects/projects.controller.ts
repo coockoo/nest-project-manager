@@ -12,6 +12,12 @@ export class ProjectsController {
     return this.projectsService.queryProjects();
   }
 
+  @Get(':id')
+  public findById(@Param('id') id: string) {
+    const creatorId = '1';
+    return this.projectsService.findById(id);
+  }
+
   @Post()
   public async create(@Body() dto: CreateProjectDto) {
     return this.projectsService.createProject(dto.url);

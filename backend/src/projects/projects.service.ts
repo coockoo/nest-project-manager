@@ -19,6 +19,10 @@ export class ProjectsService {
     return this.projectRepository.find();
   }
 
+  public async findById(id: string) {
+    return this.projectRepository.findOne({ id });
+  }
+
   public async createProject(url: string) {
     const repoInfo = await this.githubService.getInfoByUrl(url);
     return this.projectRepository.save({

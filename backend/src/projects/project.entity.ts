@@ -22,4 +22,7 @@ export class Project {
 
   @Column({ type: 'timestamptz', name: 'created_at' })
   createdAt: string;
+
+  @Column({ type: 'bigint', name: 'creator_id' })
+  creatorId: string;
 }

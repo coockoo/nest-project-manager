@@ -53,6 +53,6 @@ export class UsersService {
       password: passwordHash,
     });
 
-    return this.jwtService.sign(user);
+    return this.jwtService.sign(newUser);
   }
 }
