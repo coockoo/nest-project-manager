@@ -22,6 +22,7 @@ export default function SignInPage() {
 
   return (
     <div className={s.page}>
+      <h1>Sign In</h1>
       <form>
         <div className={s.formGroup}>
           <label htmlFor="username">Username</label>

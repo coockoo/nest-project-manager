@@ -24,6 +24,7 @@ export default function SignUpPage() {
 
   return (
     <div className={s.page}>
+      <h1>Sign Up</h1>
       <form>
         <div className={s.formGroup}>
           <label htmlFor="username">Username</label>
