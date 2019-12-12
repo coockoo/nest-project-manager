@@ -1,11 +1,12 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+NAME=nest-project-manager-postgres
 
 # Database name is completely random. Why not this one
 
-docker rm -f comcard-test-postgres
+docker rm -f $NAME
 
 docker run \
-  --name comcard-test-postgres \
+  --name $NAME \
   --rm \
   --publish 5432:5432 \
   --volume $DIR/initdb.d:/docker-entrypoint-initdb.d \

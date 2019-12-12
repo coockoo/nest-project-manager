@@ -1,9 +1,15 @@
-# Comcard backend test
+# Nest.js project manager
 
 # How to start
 
 - To start Postgres – run `./postgres/dev.sh` from the project root.
   Leave it in a separate terminal window/tab to run.
+
+- To start backend `cd backend && npm i && npm run dev`
+
+- To start frontend `cd backend && npm i && npm run dev`
+
+- Go to [http://localhost:8080](http://localhost:8080)
 
 # Thoughts
 
